@@ -1,7 +1,6 @@
 # python
-command = ''
-started = False
 
+started = False
 while True:
  command = input('> ').lower()
  if command == 'start':
@@ -24,5 +23,5 @@ while True:
                ''')
  elif command == 'quit':
         break
-else:
-    print('dont understand that !!')
+ else:
+  print('dont understand that !!')
