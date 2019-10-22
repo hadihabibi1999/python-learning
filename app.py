@@ -1,15 +1,28 @@
-
 # python
+command = ''
+started = False
 
-weight = input('weight: ')
-k_or_lbs = input("this is (k)g or (l)bs ? ")
-if k_or_lbs.upper() == 'K' :
- answer = int(weight) / 0.45
- print( f'your weight(lbs): {answer} pounds')
-elif k_or_lbs.upper() == 'L':
- answer = int(weight) * 0.45 
- print( f'your weight(kg): {answer} kilo grams')
+while True:
+ command = input('> ').lower()
+ if command == 'start':
+        if not started:
+            print('car started ...')
+            started = True
+        else:
+            print('car already started !!')
+ elif command == 'stop':
+        if not started:
+            print('car already stopped!!')
+        else:
+            print('car stopped')
+            started = False
+ elif command == 'help':
+        print('''
+ start -> start the car 
+ stop -> stop the car 
+ quit -> to quit
+               ''')
+ elif command == 'quit':
+        break
 else:
-    print("went wrong")
-
-
+    print('dont understand that !!')
